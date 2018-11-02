@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Toss The Coin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4/css/tachyons.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+    
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .NoSelect {
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+        }
+    </style>
+</head>
+<body style="font-family: 'Gloria Hallelujah', cursive;">
+<div class="flex flex-column justify-top">
+    <div>
+        <div id="v1Container" class="w-100 h-100 dib fixed">
+        <video id="v1"width="100%" >
+            <source src="Heads.mp4" type="video/mp4" >
+            Your browser does not support the HTML5 video tag.
+        </video>
+        </div>
+        <div id="v2Container" class="w-100 h-100 dib fixed">
+        <video id="v2" width="100%" >
+            <source src="Tails.mp4" type="video/mp4" >
+            Your browser does not support the HTML5 video tag.
+        </video>
+        </div >
+        <div id="StartImage" class="flex flex-row justify-center w-100 dib fixed-l z-999">
+                <img src="StartImage.png" alt="" width="100%" height="100%" >
+        </div>
+    </div>
+    <div class="z-999 pa3 bg-near-white pa0-l">
+        <div id="Toss" class="bottom-2 z-999 b--blue fixed-l w-100 flex flex-column items-center justify-center tc">
+            <div id="FirstTime" class="dark-gray br4-l br3 shadow-2 bottom-2 tc w5-l pa3-l pv1 ph3 f3-l f5 bg-white pointer:hover NoSelect">TOSS</div>
+            <h1 class="f4-l f5 ma1 pt3-l pt1 tc">Current Session:</h2>
+            <div class="w-100">
+                <div class="flex flex-row justify-center ph1 f6">Heads:<p id="TotalHeads" class="ph1 silver">0</p> <div class="mh2-l mh1"></div> Tails:<p id="TotalTails" class="ph1 silver">0</p> </div>
+                    <p class="dib f6 ">Total Flips: <p id="TotalFlips" class="pa1 dib silver">0</p></p>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
